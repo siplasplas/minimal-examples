@@ -1,10 +1,9 @@
-#include "MainWindow.h"
+#include "LibWindow.h"
 #include <QPushButton>
 
-MainWindow::MainWindow(QWidget *parent)
+LibWindow::LibWindow(QWidget *parent)
     : QMainWindow(parent)
 {
     QPushButton *button = new QPushButton(this);
     setCentralWidget(button);
-    lw.show();
 }
