@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
     QPushButton *button = new QPushButton(this);
     QIcon icon;
     icon.addFile(":1.png", QSize(48, 48));
-    setCentralWidget(button);
     button->setIcon(icon);
+    setCentralWidget(button);
     lw.show();
 }
