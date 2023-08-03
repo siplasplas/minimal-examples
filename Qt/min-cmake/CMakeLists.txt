@@ -15,6 +15,6 @@ set(PROJECT_SOURCES
         MainWindow.h
 )
 
-add_executable(min-cmake ${PROJECT_SOURCES})
+add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
 
-target_link_libraries(min-cmake PRIVATE Qt5::Widgets)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Widgets)
