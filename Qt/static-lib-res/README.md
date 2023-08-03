@@ -10,7 +10,8 @@ Both have qrc files, like
 </qresource>
 </RCC>
 ```
-whereas main app see paths do png images,  library don't.
+whereas main app can see paths do png images,
+library can't.
 
 Second problem:
 
@@ -21,4 +22,4 @@ although images are 48x48 and even explicit is set size to 48x48
     button->setIcon(icon);
     setCentralWidget(button);
 ```
-Digit "1" is too small (Seem to be resized to 16x16 or 24x24).
+Digit "1" is too small, seems to be resized to 16x16 or 24x24.
