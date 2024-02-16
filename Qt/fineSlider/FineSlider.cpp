@@ -82,11 +82,9 @@ int FineSlider::pixelPosToRangeValue(int pos) {
     sliderLength = height();
   }
   if (mainSlider) {
-    int range = maximum() - minimum();
     int mainMax = mainSlider->maximum();
     int mainMin = mainSlider->minimum();
-    int mm = minimum(), mx = maximum();
-    pos = valueToPixels(max(min(mm + pixelsToValue(pos), mainMax), mainMin) - mm);
+    pos = valueToPixels(max(min(pixelsToValue(pos), mainMax), mainMin));
   }
   return QStyle::sliderValueFromPosition(minimum(), maximum(), pos, sliderLength);
 }
@@ -109,11 +107,11 @@ void FineSlider::mousePressEvent(QMouseEvent *event) {
 }
 
 int FineSlider::pixelsToValue(int pos) {
-  return (int) (pos / gamma());
+  return (int) (pos / gamma()) + minimum();
 }
 
-int FineSlider::valueToPixels(int pos) {
-  return (int) (pos * gamma());
+int FineSlider::valueToPixels(int val) {
+  return (int) ((val - minimum()) * gamma());
 }
 
 double FineSlider::gamma() {

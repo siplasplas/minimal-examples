@@ -15,7 +15,7 @@ Q_OBJECT
   QVector<FineSlider *> fineSliders;
   double gamma();
   int pixelsToValue(int pos);
-  int valueToPixels(int pos);
+  int valueToPixels(int val);
 public:
   explicit FineSlider(FineSlider *mainSlider, Qt::Orientation orientation, QWidget *parent = nullptr);
 
